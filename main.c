@@ -56,7 +56,7 @@ void сlearMap()
     map[0][mapWidth] = '\0';
     for (int j = 1; j < mapHeight; j++)
     {
-            sprintf(map[j], map[1], 0);//?????????????????/
+            sprintf(map[j], map[1], 0);
             map[j][0] = '*';
             map[j][mapWidth-1] = '*';
     }
@@ -66,11 +66,6 @@ void сlearMap()
 
 void showMap()
 {   
-    for (int i = 0; i < mapHeight; i++)
-    {
-        
-    }
-
     for (int i = 0; i < mapHeight; i++)
     {
         addstr(map[i]);
@@ -150,7 +145,7 @@ void vertMoveObject(object *obj)
 
             if (brick[i].type == '+')
             {
-                lag(300000000);//?????????????????????????????????????????/
+                lag(300000000);
                 level ++;
                 if (level > maxLevel) level = 1;
                 createLevel(level);
